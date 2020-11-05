@@ -7,6 +7,10 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', data => console.log(data));
+  conn.on('connect', () => {
+    console.log('Succesfully connected to game server');
+    conn.write('Name: ZHM');
+  });
   return conn;
 }
 
