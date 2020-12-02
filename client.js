@@ -10,6 +10,7 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('Succesfully connected to game server');
     conn.write('Name: ZHM');
+    // conn.write("Move: down")
   });
   return conn;
 }
